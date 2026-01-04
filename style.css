@@ -1,0 +1,1393 @@
+/* =========================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================= */
+:root {
+    /* Tu Paleta Personalizada */
+    --color-amarillo: #FCEEB5;
+    --color-marron: #6D4C41;
+    --color-lila: #E9D6F5;
+    --color-durazno: #FFD8C2;
+    --color-rosita: #F19890;
+    
+    /* Asignación a roles del diseño */
+    --color-bg-cream: #FFF9F0;           /* Fondo general muy clarito */
+    --color-bg-beige: var(--color-amarillo); /* Fondo tarjetas servicios */
+    --color-bg-footer: var(--color-amarillo);
+    
+    --color-text-dark: var(--color-marron);  /* Todo el texto es marrón */
+    --color-text-pink: var(--color-rosita); /* Detalles rosita */
+    
+    --color-primary-btn: var(--color-rosita); /* Botones */
+    
+    /* Degradado Header */
+    --color-bg-gradient-start: var(--color-amarillo); 
+    --color-bg-gradient-end: var(--color-lila);
+    
+    /* Tipografías y Espaciado */
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --border-radius-lg: 30px;
+    --section-spacing: 80px;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-bg-cream);
+}
+
+/* Clases utilitarias */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+.align-left { text-align: left; }
+.text-pink { color: var(--color-text-pink); }
+
+.section-padding {
+    padding: var(--section-spacing) 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+h2.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary-btn);
+    color: #FFFF; /* Texto  */
+    box-shadow: 0 4px 15px rgba(241, 152, 144, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   2. HEADER Y HERO
+   ========================================= */
+.main-header {
+    background: linear-gradient(135deg, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.hero {
+    padding-top: 50px;
+    position: relative;
+}
+
+/* Logo animado principal */
+.hero-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 4px solid rgba(255,255,255,0.5);
+}
+
+.main-blob {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Iconos Flotantes del Hero */
+i.floater {
+    font-size: 2.5rem;
+    position: absolute;
+    opacity: 0.7;
+    animation: float 4s ease-in-out infinite;
+    z-index: 1; 
+}
+
+/* Estrella blanca */
+.floater-1 { 
+    color: var(--color-rosita); 
+    top: 10%; left: 5%; 
+    transform: rotate(-20deg); 
+    font-size: 3.5rem; 
+}
+/* Rayo rosita */
+.floater-2 { 
+    color: var(--color-rosita); 
+    top: 20%; right: 10%; 
+    font-size: 2rem;
+    animation-delay: 1s;
+}
+/* Triángulo rosita */
+.floater-3 { 
+    color: var(--color-rosita); 
+    bottom: 15%; left: 8%; 
+    transform: rotate(-45deg); 
+    animation-delay: 2s;
+}
+/* Luna rosita */
+.floater-4 { 
+    color: var(--color-rosita); 
+    bottom: 25%; right: 20%; 
+    transform: rotate(20deg); 
+    font-size: 2.2rem;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(10deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* =========================================
+   3. WRAPPER LADO A LADO (Servicios + Proyectos)
+   ========================================= */
+@media (min-width: 992px) {
+    .services-projects-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+        gap: 60px;
+        align-items: start;
+    }
+    /* CAMBIO: Centramos los títulos para que queden sobre las tarjetas */
+    .services-projects-wrapper h2.section-title {
+        text-align: center; 
+        margin-bottom: 30px; /* Un poco menos de espacio para que se vea conectado */
+    }
+}
+/* =========================================
+   4. CARRUSELES (General y Específicos)
+   ========================================= */
+.carousel-container {
+    position: relative;
+    padding: 0 40px;
+    /* Centramos el carrusel en sí mismo para asegurar alineación con el título */
+    margin: 0 auto; 
+    max-width: 450px; /* Limitamos el ancho total para que las flechas no se vayan muy lejos */
+}
+
+/* --- IGUALAMOS ALTURAS PARA QUE LAS FLECHAS COINCIDAN --- */
+
+/* Altura Servicios */
+.services-carousel-height .carousel-track-container {
+    height: 350px; 
+}
+/* Altura Proyectos (Ahora igual que servicios) */
+.projects-carousel-height .carousel-track-container {
+    height: 350px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    /* CAMBIO: Reducido a 320px para que los globos sean más pequeños y cute */
+    max-width: 320px; 
+    margin: 0 auto;
+}
+
+.carousel-track {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botones de navegación (Flechas) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Esto centra verticalmente basándose en la altura del contenedor */
+    background: rgba(255,255,255,0.8); /* Un poco más opaco para que se vea bien */
+    border: none;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--color-text-dark);
+    font-size: 1.2rem;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombrita suave para destacar */
+    transition: transform 0.2s;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.1); /* Efecto pop al pasar el mouse */
+    color: var(--color-primary-btn);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* Indicadores (puntos) */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px; /* Reducido un poco */
+}
+.carousel-indicator {
+    border: none;
+    width: 10px; height: 10px; /* Puntos un pelín más chicos */
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.carousel-indicator.current-indicator {
+    background-color: var(--color-primary-btn);
+}
+
+/* =========================================
+   5. ESTILOS DE TARJETAS (Servicios)
+   ========================================= */
+.service-card {
+    background-color: var(--color-bg-beige);
+    padding: 40px 30px;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    transform: rotate(-2deg); /* Estilo "juguetón" original */
+    transition: transform 0.3s ease;
+    border: 3px solid white;
+}
+
+.service-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.service-card h3 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: var(--color-marron);
+}
+
+.icon-wrapper {
+    font-size: 2.5rem;
+    color: var(--color-primary-btn);
+    background: white;
+    width: 70px; height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* =========================================
+   6. ESTILOS DE GLOBOS (Proyectos)
+   ========================================= */
+.project-blob {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.project-blob img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.project-blob:hover img {
+    transform: scale(1.05);
+}
+
+/* Formas y Colores de los Blobs */
+.blob-shape-1 { border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+.blob-shape-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+.blob-shape-3 { border-radius: 72% 28% 58% 42% / 44% 64% 36% 56%; }
+
+.blob-pink {
+    border: 8px solid var(--color-durazno);
+    background-color: #FFF5EE;
+}
+.blob-yellow {
+    border: 8px solid var(--color-amarillo);
+    background-color: #FFFFF0;
+}
+.blob-purple {
+    border: 8px solid var(--color-lila);
+    background-color: #F8F8FF;
+}
+
+/* =========================================
+   7. SOBRE MÍ, TESTIMONIOS Y FOOTER
+   ========================================= */
+.about-section {
+    background-color: var(--color-bg-beige);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-avatar {
+    width: 250px; height: 250px;
+    border: 5px solid white;
+}
+
+.about-deco {
+    position: absolute;
+    color: var(--color-text-pink);
+    font-size: 1.5rem;
+}
+.deco-1 { top: 0; right: 0; }
+.deco-2 { bottom: 10%; left: -10%; }
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row; 
+        gap: 80px;
+    }
+    .about-content { flex: 1; }
+}
+
+/* Testimonios */
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    flex: 1 1 300px;
+    max-width: 500px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: 40px;
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.stars {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    display: block;
+    margin-top: 20px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+/* =========================================
+   FOOTER MINIMALISTA (Estilo Referencia)
+   ========================================= */
+
+/* Ajustes generales del contenedor del footer */
+.main-footer {
+    /* Mantenemos el fondo rosita que configuramos antes */
+    background-color: var(--color-durazno); 
+    color: var(--color-marron); /* Texto marrón para contraste elegante */
+    text-align: center; /* Todo centrado */
+    padding-bottom: 60px; /* Espacio al final */
+}
+
+.footer-minimalist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre bloques (Links, Redes, Pagos) */
+    margin-top: -10px;
+    position: relative; 
+    z-index: 10;
+}
+
+/* 1. Enlaces de Navegación */
+.footer-nav {
+    display: flex;
+    flex-direction: column; /* Lista vertical como en la foto */
+    gap: 15px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-marron);
+    font-size: 0.85rem; /* Letra pequeña y delicada */
+    text-transform: uppercase; /* Todo mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+    opacity: 0.6;
+}
+
+/* 2. Redes Sociales (Cuadrados) */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-marron); /* Borde fino */
+    color: var(--color-marron);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: var(--color-marron);
+    color: var(--color-rosita); /* Invertimos colores al pasar el mouse */
+}
+
+/* 3. Créditos */
+.footer-credits p {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* 4. Medios de Pago */
+.footer-payments {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0.9;
+}
+
+/* Estilo para los iconos de FontAwesome (Visa, Master, Paypal) */
+.footer-payments i {
+    font-size: 1.8rem; /* Un poco más grandes para que se vean bien */
+    color: var(--color-marron);
+}
+
+
+
+/* =========================================
+   8. BOTÓN DE MÚSICA FLOTANTE
+   ========================================= */
+
+.music-floater {
+    position: fixed;
+    bottom: 30px; left: 30px; 
+    width: 50px; height: 50px;
+    background-color: var(--color-bg-cream);
+    border: 3px solid var(--color-primary-btn);
+    color: var(--color-primary-btn);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.music-floater:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: var(--color-primary-btn);
+    color: white;
+}
+
+.music-playing {
+    background-color: var(--color-primary-btn) !important;
+    color: white !important;
+    border-color: white !important;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* =========================================
+   9. GRILLA DE PORTFOLIO (Página interna)
+   ========================================= */
+
+.portfolio-header {
+    padding-bottom: 40px;
+    background: linear-gradient(135deg, var(--color-bg-gradient-start), #fff);
+}
+.portfolio-header .nav-links .active {
+    color: var(--color-primary-btn);
+    border-bottom: 2px solid var(--color-primary-btn);
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    padding: 20px;
+}
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.project-item:hover {
+    transform: translateY(-10px);
+}
+.blob-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.05);
+    background: #fff;
+}
+.blob-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.blob-frame:hover img {
+    transform: scale(1.1);
+}
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+/* =========================================
+   SECCIÓN DE PACKS Y PRECIOS
+   ========================================= */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo automático */
+    gap: 40px;
+    align-items: start; /* Para que si una es más larga, no estire a las otras */
+}
+
+/* Diseño base de la tarjeta */
+.pricing-card {
+    background: #fff;
+    border-radius: var(--border-radius-lg);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent; /* Espacio para el borde de color */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   SECCIÓN DE PROCESO (Estilo Tarjetas)
+   ========================================= */
+
+.process-wrapper {
+    position: relative;
+    padding: 40px 0; /* Un poco más de espacio vertical */
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    align-items: stretch; /* Para que todas tengan la misma altura */
+    position: relative;
+    z-index: 2;
+}
+
+/* Línea conectora (ajustada para las nuevas tarjetas) */
+.dashed-line {
+    display: none;
+    position: absolute;
+    top: 50%; /* Centrada verticalmente */
+    left: 15%;
+    right: 15%;
+    height: 4px;
+    border-top: 4px dotted #E0E0E0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 992px) {
+    .dashed-line { display: block; }
+}
+
+/* --- DISEÑO DE LA TARJETA DEL PASO --- */
+.process-step {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 25px; /* Bordes redondeados estilo "Packs" */
+    text-align: center;
+    position: relative;
+    border: 3px solid transparent; /* Preparamos para el color */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efecto Hover tipo "pop" */
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* El círculo interno del icono */
+.step-icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-marron);
+    margin-bottom: 25px;
+    border-radius: 50%; /* Círculo perfecto */
+    background-color: #f5f5f5; /* Color por defecto por si falla algo */
+}
+
+/* El número flotante (ajustado a la esquina de la tarjeta) */
+.step-number {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background: white;
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid white;
+}
+
+.process-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--color-marron);
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* --- VARIABLES DE COLOR POR TARJETA --- */
+
+/* Paso 1 - Lila*/
+.step-lila {
+    border-color: var(--color-lila);
+}
+.step-lila .step-icon-circle {
+    background-color: #F4EEFB;
+}
+.step-lila .step-number {
+    color: #9575CD;
+}
+
+/* Paso 2 - Durazno */
+.step-durazno {
+    border-color: var(--color-durazno);
+}
+.step-durazno .step-icon-circle {
+    background-color: #FFF5EE;
+}
+.step-durazno .step-number {
+    color: #FF8A65;
+}
+
+
+
+
+
+/* --- ESTILOS POR COLOR (Usando tus variables) --- */
+
+/* Pack Amarillo */
+.pack-yellow {
+    border-color: var(--color-amarillo);
+}
+.pack-yellow .pack-price { color: #E6C200; /* Un amarillo un poco más oscuro para leerse bien */ }
+.pack-yellow .btn-pricing { background-color: var(--color-amarillo); color: var(--color-marron); }
+
+/* Pack Rosita (Destacado) */
+.pack-pink {
+    border-color: var(--color-rosita);
+    background: #FFFBFB; /* Fondo muy sutilmente rosado */
+    transform: scale(1.05); /* Un poquito más grande por defecto */
+    z-index: 1;
+}
+.pack-pink:hover { transform: scale(1.08) translateY(-10px); }
+.pack-pink .pack-price { color: var(--color-rosita); }
+.pack-pink .btn-pricing { background-color: var(--color-rosita); color: white; }
+
+/* Pack Lila */
+.pack-purple {
+    border-color: var(--color-lila);
+}
+.pack-purple .pack-price { color: #B39DDB; /* Lila más oscuro */ }
+.pack-purple .btn-pricing { background-color: var(--color-lila); color: var(--color-marron); }
+
+
+/* --- ELEMENTOS INTERNOS --- */
+.pack-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: var(--color-marron);
+}
+
+.pack-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.pack-price {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.pack-price .currency { font-size: 1.5rem; vertical-align: top; }
+.pack-price .period { font-size: 1rem; color: var(--color-text-dark); opacity: 0.5; font-weight: 400; }
+
+.pack-features {
+    list-style: none;
+    text-align: left; /* Lista alineada a la izquierda */
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.pack-features li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.pack-features i {
+    color: var(--color-primary-btn); /* Checkmarks en rosita */
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Etiqueta "Más Pedido" */
+.tag-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-rosita);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Botón específico de pricing */
+.btn-pricing {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: filter 0.3s;
+    width: 100%; /* Botón ancho completo */
+}
+
+.btn-pricing:hover {
+    filter: brightness(0.95); /* Oscurecer un poquito al pasar el mouse */
+}
+
+/* Ajuste Responsive: En celular quitar el scale del destacado para que no se salga */
+@media (max-width: 768px) {
+    .pack-pink { transform: scale(1); }
+    .pack-pink:hover { transform: translateY(-10px); }
+}
+
+/* =========================================
+   SECCIÓN CTA (Llamada a la acción)
+   ========================================= */
+
+.cta-section {
+    background: transparent; /* Sin fondo de color en la sección completa */
+    padding: 60px 0;
+}
+
+.cta-box {
+    /* El truco para que ocupe solo lo necesario: */
+    display: inline-block; 
+    max-width: 800px; /* Un límite para que no sea excesivamente ancho en pantallas grandes */
+    width: 90%; /* En móviles ocupará el 90% */
+    
+    /* El Borde Color Durazno */
+    border: 4px solid var(--color-rosita); 
+    border-radius: 40px; /* Bordes bien redondeados estilo cute */
+    
+    /* Espaciado interno para que el texto respire dentro del cuadro */
+    padding: 50px 40px;
+    
+    /* Opcional: Un fondo blanco o crema muy suave dentro del cuadro para que se lea mejor */
+    background-color: var(--color-bg-cream); 
+}
+
+.cta-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    color: var(--color-marron);
+}
+
+.text-bold {
+    font-weight: 800;
+    color: var(--color-rosita); /* Destacamos las palabras clave en rosita */
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--color-text-dark);
+}
+
+/* Botón del CTA */
+.btn-cta {
+    background-color: var(--color-amarillo);
+    color: var(--color-marron);
+    padding: 12px 30px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-durazno); /* Al pasar el mouse se pone color durazno */
+    color: var(--color-marron);
+}
+
+/* =========================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-rosita);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000; /* Para que esté siempre encima de todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    /* Animación de pulso para llamar la atención */
+    animation: pulse-pink 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9); 
+}
+
+/* Definición de la animación de pulso */
+@keyframes pulse-pink {
+	0% {
+		box-shadow: 0 0 0 0 rgba(241, 152, 144, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 15px rgba(241, 152, 144, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(241, 152, 144, 0);
+	}
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2rem;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* =========================================
+   DIVISOR DE ONDAS (Nuevo Estilo Rosita)
+   ========================================= */
+
+.wave-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-bg-cream); /* Coincide con el fondo de la web */
+    margin-bottom: -2px; /* Un pequeño ajuste para evitar líneas blancas */
+}
+
+.wave-container svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px; /* Ondas más altas para que se luzcan las capas */
+}
+
+/* Color de la capa trasera (Durazno) */
+.wave-back {
+    fill: var(--color-durazno); 
+}
+
+/* Color de la capa delantera (Rosita) */
+.wave-front {
+    fill: var(--color-amarillo);
+}
+
+/* --- AJUSTE DEL FOOTER PARA QUE COMBINE --- */
+/* Cambiamos el fondo del footer para que se fusione con la onda delantera */
+.main-footer {
+    background-color: var(--color-amarillo); /* Antes era var(--color-bg-footer) */
+    color: var(--color-marron); /* Texto claro para que se lea bien sobre el rosita */
+    text-align: center;
+    padding-top: 0px !important;
+    padding-bottom: 20px;
+
+}
+
+/* Aseguramos que los enlaces del footer también sean claros */
+.footer-links a {
+    color: var(--color-bg-cream);
+    opacity: 0.9;
+}
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .wave-container svg {
+        height: 50px; /* Altura ajustada para móvil */
+    }
+}
+
+/* =========================================
+   PÁGINAS LEGALES (Cookies, Términos, etc.)
+   ========================================= */
+.legal-section .section-title {
+    text-align: center;
+    margin-bottom: 40px; /* Un poco de aire debajo del título */
+    text-decoration: underline;
+}
+
+   .legal-content {
+    max-width: 800px; /* Ancho máximo de lectura cómodo */
+    margin: 0 auto;   /* Centrado */
+    text-align: left; /* Texto alineado a la izquierda */
+    padding: 0 20px;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+}
+
+.legal-content h3 {
+    color: var(--color-marron);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+/* Ajuste del Header en páginas internas */
+/* Quitamos el degradado o lo hacemos más sutil si prefieres */
+body {
+    /* Asegura que el fondo siga siendo crema */
+    background-color: var(--color-bg-cream);
+}
+
+/* =========================================
+   10. ESTILOS PREGUNTAS FRECUENTES (Acordeón)
+   ========================================= */
+
+/* Títulos de las secciones dentro de las FAQs */
+.faq-category-title {
+    font-family: var(--font-heading);
+    color: var(--color-rosita); /* Rosita para destacar */
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: left; /* Alineado a la izquierda para seguir la lectura */
+    display: inline-block;
+    border-bottom: 2px dashed var(--color-lila);
+}
+
+/* La tarjeta contenedora de cada pregunta */
+details.faq-card {
+    background-color: #ffffff; /* Blanco para resaltar sobre el fondo crema */
+    margin-bottom: 15px;
+    border-radius: 20px; /* Redondito estilo cute */
+    border: 2px solid transparent;
+    box-shadow: 0 4px 10px rgba(109, 76, 65, 0.05); /* Sombra suave color marrón */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+details.faq-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(241, 152, 144, 0.15); /* Sombrita rosada */
+    border-color: var(--color-lila);
+}
+
+/* Estilo cuando la pregunta está ABIERTA */
+details.faq-card[open] {
+    border-color: var(--color-rosita); /* Borde rosita al abrir */
+    background-color: #FFFBFB; /* Fondo muy sutil rosado */
+}
+
+/* El texto de la pregunta (El botón clickeable) */
+summary {
+    padding: 20px 25px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-marron);
+    list-style: none; /* Oculta el triángulo feo por defecto */
+    position: relative;
+    padding-right: 50px; /* Espacio para el icono */
+}
+
+/* Ocultar triángulo en Safari/Chrome */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* El Icono (+) hecho con CSS */
+summary::after {
+    content: '+'; 
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-rosita);
+    transition: transform 0.3s ease;
+}
+
+/* Animación del Icono cuando se abre (-) */
+details[open] summary::after {
+    transform: translateY(-50%) rotate(45deg); /* Gira para formar una X */
+    color: var(--color-marron);
+}
+
+/* Contenedor de la respuesta */
+.faq-answer {
+    padding: 0 25px 25px 25px;
+    color: #666; /* Un gris suave para leer mejor */
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Pequeña animación para que el texto aparezca suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   MENÚ RESPONSIVE (Estilo Full Screen Blur)
+   ========================================= */
+
+/* Ocultar elementos móviles en escritorio */
+.hamburger-menu, .full-screen-menu {
+    display: none;
+}
+
+/* --- ESTILOS PARA MÓVIL (Menores a 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Ocultar menú de escritorio y mostrar hamburguesa */
+    .desktop-nav { display: none; }
+    
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--color-marron); /* O blanco si el fondo es oscuro */
+        font-size: 1.8rem;
+        cursor: pointer;
+        position: fixed;
+        top: 20px; 
+        right: 20px; 
+        z-index: 1000;
+
+        /* ESTÉTICA DE BOTÓN FLOTANTE */
+        /* Le damos fondo y forma para que se vea bien sobre cualquier color */
+        background-color: rgba(255, 255, 255, 0.9); /* Blanco casi opaco */
+        backdrop-filter: blur(5px); /* Efecto vidrio sutil */
+        width: 50px; 
+        height: 50px;
+        border-radius: 50%; /* Lo hacemos redondo */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombrita para que se destaque */
+        border: 2px solid var(--color-rosita); /* Borde rosita para combinar */
+        
+        /* Centrar el icono dentro del círculo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: var(--color-marron); 
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto al tocarlo */
+    .hamburger-menu:active {
+        transform: scale(0.9);
+    }
+
+    }
+
+    /* 2. El Contenedor Pantalla Completa */
+    .full-screen-menu {
+        display: flex; /* Usamos flex para centrar todo */
+        flex-direction: column;
+        justify-content: center; /* Centrado vertical */
+        align-items: center;     /* Centrado horizontal */
+        
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 9999; /* Por encima de todo */
+        
+        /* Fondo oscuro con transparencia + Blur (Efecto de la foto) */
+        background-color: rgba(50, 40, 40, 0.85); /* Un marrón muy oscuro transparente */
+        backdrop-filter: blur(10px); /* El efecto borroso */
+        -webkit-backdrop-filter: blur(10px); /* Para Safari */
+        
+        /* Animación de entrada */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    /* Clase para mostrar el menú (se activa con JS) */
+    .full-screen-menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 3. Botón de Cerrar (X) */
+    .close-menu-btn {
+        position: absolute;
+        top: 30px;
+        background: none;
+        border: none;
+        color: white; /* La X en blanco */
+        font-size: 2rem;
+        cursor: pointer;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--color-rosita); /* La línea debajo de la X */
+        width: 50px;
+        transition: transform 0.3s;
+    }
+    
+    .close-menu-btn:hover { transform: rotate(90deg); }
+
+    /* 4. Lista de Enlaces */
+    .mobile-nav-list {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .mobile-nav-list li {
+        margin: 25px 0;
+    }
+
+    .mobile-link {
+        text-decoration: none;
+        color: #ddd; /* Blanco suave */
+        font-family: var(--font-body);
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Espacio entre icono y texto */
+    }
+
+    .mobile-link i {
+        font-size: 1rem;
+        color: var(--color-rosita); /* Iconos en rosita */
+    }
+
+    /* Efecto Hover/Active: Se pone todo rosita */
+    .mobile-link:hover, .mobile-link:active {
+        color: var(--color-rosita);
+    }
+
+    /* 5. Botón CTA 'Contactame' (Estilo Outline) */
+    .btn-mobile-cta {
+        margin-top: 20px;
+        padding: 12px 60px;
+        border: 1px solid white; /* Borde blanco fino */
+        border-radius: 50px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        transition: all 0.3s;
+    }
+
+    .btn-mobile-cta:hover {
+        background-color: var(--color-rosita);
+        border-color: var(--color-rosita);
+        color: white;
+    }

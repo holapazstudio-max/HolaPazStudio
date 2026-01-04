@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolaPaz.Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar container">
+            <div class="logo">HolaPaz.Studio</div>
+                <ul class="nav-links desktop-nav">                
+                <li><a href="portfolio.html">Trabajos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#packs">Packs</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>            
+            </ul>
+            <button class="hamburger-menu" id="hamburgerBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <section class="hero container">
+            <i class="fas fa-star floater floater-1"></i>
+            <i class="fas fa-bolt floater floater-2"></i>
+            <i class="fas fa-moon floater floater-3"></i>
+            <i class="fas fa-heart floater floater-4"></i>
+
+            <div class="hero-content text-center">
+                <img src="assets/images/logosinestrellaslogopaz.svg" alt="Hola Paz Studio Logo" class="hero-logo main-blob">
+                <h1 class="hero-title">¡Hola! Creo experiencias digitales que enamoran</h1>
+                <p class="hero-subtitle">Diseño Web & Motion Graphics</p>
+                <a href="portfolio.html" class="btn btn-primary">Ver trabajos <i class="fas fa-heart"></i></a>
+            </div>
+        </section>
+    </header>
+
+
+
+<div class="full-screen-menu" id="mobileMenu">
+        <button class="close-menu-btn" id="closeMenuBtn">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <ul class="mobile-nav-list">
+            <li>
+                <a href="#servicios" class="mobile-link">
+                    <i class="fas fa-star"></i> Servicios
+                </a>
+            </li>
+            <li>
+                <a href="#packs" class="mobile-link">
+                    <i class="fas fa-gift"></i> Packs
+                </a>
+            </li>
+            <li>
+                <a href="portfolio.html" class="mobile-link">
+                    <i class="fas fa-folder-open"></i> Trabajos
+                </a>
+            </li>
+            <li>
+                <a href="#sobre-mi" class="mobile-link">
+                    <i class="fas fa-heart"></i> Sobre Mí
+                </a>
+            </li>
+            <li>
+                <a href="#proceso" class="mobile-link">
+                    <i class="fas fa-location-arrow"></i> Proceso
+                </a>
+            </li>
+        </ul>
+
+        <a href="https://wa.me/543624872523?text=Hola!%20Quiero%20más%20info%20sobre%20tus%20servicios" class="btn-mobile-cta mobile-link" target="_blank">Contactame</a>
+    </div>
+
+
+
+
+
+
+    <main>
+        <div class="services-projects-wrapper container section-padding">
+            
+            <section id="servicios" class="services-section">
+                <h2 class="section-title">Servicios</h2>
+                
+                <div class="carousel-container services-carousel-height">
+                    <button class="carousel-btn prev-btn" id="servPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track" id="servicesTrack">
+                            
+                            <li class="carousel-slide current-slide">
+                                <div class="service-card card-beige">
+                                    <div class="icon-wrapper"><i class="fas fa-mouse-pointer"></i></div>
+                                    <h3>Diseño Web</h3>
+                                    <p>Landing Pages y Sitios Web programados con código limpio para un rendimiento óptimo.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="carousel-slide">
+                                <div class="service-card card-beige">
+                                     <div class="icon-wrapper"><i class="fas fa-palette"></i></div>
+                                    <h3>Branding</h3>
+                                    <p>Diseño de logo, paleta de colores y estrategia visual para conectar con tu audiencia.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="carousel-slide">
+                                <div class="service-card card-beige">
+                                     <div class="icon-wrapper"><i class="fas fa-play"></i></div>
+                                    <h3>Motion Graphics</h3>
+                                    <p>Animación de logos y videos dinámicos para captar la atención en redes sociales.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <button class="carousel-btn next-btn" id="servNextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="portfolios" class="projects-section">
+                <h2 class="section-title">Proyectos Recientes</h2>
+                
+                <div class="carousel-container projects-carousel-height">
+                    <button class="carousel-btn prev-btn" id="projPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track" id="projectsTrack">
+                            <li class="carousel-slide current-slide">
+                                <div class="project-blob blob-shape-1 blob-yellow">
+                                    <img src="assets/images/amanay.gif" alt="Logo Amanay Animado">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="project-blob blob-shape-2 blob-purple">
+                                    <img src="assets/images/festifercho.png" alt="Festi Fercho">
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="project-blob blob-shape-3 blob-pink">
+                                    <img src="assets/images/lastresmarias.png" alt="Las Tres Marías">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="carousel-btn next-btn" id="projNextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+            </section>
+        
+        </div> 
+        <section id="packs" class="pricing-section section-padding container">
+            <h2 class="section-title">Packs Disponibles ✨</h2>
+            <div class="pricing-grid">
+                
+                <div class="pricing-card pack-yellow">
+                    <div class="pack-header">
+                        <h3>Esencial</h3>
+                        <p class="pack-subtitle">Ideal para empezar</p>
+                    </div>
+ 
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Diseño One Page (Landing)</li>
+                        <li><i class="fas fa-check"></i> Adaptable a Celulares</li>
+                        <li><i class="fas fa-check"></i> Formulario de Contacto</li>
+                        <li><i class="fas fa-check"></i> Botón de WhatsApp</li>
+                        <li><i class="fas fa-clock"></i> <strong>Tiempo:</strong> 1 Semana</li>
+                    </ul>
+  <a href="https://forms.gle/j1EJoPK9QHE3Erm87" class="btn btn-pricing" target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                </div>
+
+                <div class="pricing-card pack-pink popular">
+                    <span class="tag-popular">¡Más pedido!</span>
+                    <div class="pack-header">
+                        <h3>Pro Motion</h3>
+                        <p class="pack-subtitle">Identidad completa</p>
+                    </div>
+
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Incluye Pack Esencial</li>                     
+                        <li><i class="fas fa-check"></i> Servicio Branding Express</li>
+                        <li><i class="fas fa-check"></i> Animación de Logo</li>
+                        <li><i class="fas fa-check"></i> Microinteracciones en la Web</li>
+                        <li><i class="fas fa-clock"></i> <strong>Tiempo:</strong> 2 Semanas</li>
+                    </ul>
+   <a href="https://forms.gle/j1EJoPK9QHE3Erm87" class="btn btn-pricing" target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                </div>
+
+                <div class="pricing-card pack-purple">
+                    <div class="pack-header">
+                        <h3>Full</h3>
+                        <p class="pack-subtitle">Servicio completo</p>
+                    </div>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i>Web Multi-Página (Inicio, Proyectos, Perfil, Blog/Novedades).</li>
+                        <li><i class="fas fa-check"></i> Servicio Branding Completo</li>
+                        <li><i class="fas fa-check"></i> Animación de Logo</li>
+                        <li><i class="fas fa-check"></i> Motion Graphics (Max 1 min.)</li>
+                        <li><i class="fas fa-clock"></i> <strong>Tiempo:</strong> 30 Días</li>
+                    </ul>
+<a href="https://forms.gle/j1EJoPK9QHE3Erm87" class="btn btn-pricing" target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                </div>
+            </div>
+        </section> 
+
+        <section id="sobre-mi" class="about-section section-padding">
+            <div class="container about-container">
+                <div class="about-image-wrapper">
+                    <img src="assets/images/foto-paz.jpg" alt="Soy Paz" class="about-avatar main-blob">
+                    <i class="fas fa-star about-deco deco-1"></i>
+                     <i class="fas fa-sparkles about-deco deco-2"></i>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title align-left">Soy Paz, tu aliada creativa <i class="fas fa-heart text-pink"></i></h2>
+                    <p>En un mercado saturado de plantillas prefabricadas, diseño y programo tu página web desde cero. Para ello, utilizo código limpio —HTML5, CSS3 y JavaScript— con el cual construyo tu sitio milímetro a milímetro. <br>Esto no es un capricho técnico, es mi garantía para vos de que vas a tener velocidad, rendimiento, personalización total, seguridad y control.
+<br>Además te ofrezco mis servicios de Branding y Motion Graphics para que conectes genuinamente con tu audiencia.✨</p>
+                </div>
+            </div>
+        </section>
+
+<section id="proceso" class="process-section section-padding container">
+            <h2 class="section-title">¡Así creo tu Página Web! 🚀</h2>
+            
+            <div class="process-wrapper">
+                <div class="dashed-line"></div>
+
+                <div class="process-grid">
+                    
+                    <div class="process-step step-lila">
+                        <span class="step-number">01</span>
+                        <div class="step-icon-circle">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Hablemos</h3>
+                        <p>Me contás tu idea, objetivos y definimos qué necesitás exactamente.</p>
+                    </div>
+
+                    <div class="process-step step-durazno">
+                        <span class="step-number">02</span>
+                        <div class="step-icon-circle">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Diseño</h3>
+                        <p>Creo la propuesta visual, paleta de colores y el boceto de tu web.</p>
+                    </div>
+
+                    <div class="process-step step-lila">
+                        <span class="step-number">03</span>
+                        <div class="step-icon-circle">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Desarrollo</h3>
+                        <p>Programo todo desde cero según tus gustos, y me aseguro que funcione perfecto.</p>
+                    </div>
+
+                    <div class="process-step step-durazno">
+                        <span class="step-number">04</span>
+                        <div class="step-icon-circle">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Lanzamiento</h3>
+                        <p>Hacemos pruebas finales, te entrego todo y... ¡Publicamos tu página!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<section class="cta-section section-padding">
+            <div class="container text-center">
+                
+                <div class="cta-box">
+                    <h2 class="cta-title">Transformá tu presencia online <span class="text-bold">HOY</span></h2>
+                    <p class="cta-subtitle">Desarrollo un <span class="text-bold">espacio online</span> que te represente y <span class="text-bold">conecte con tu audiencia</span>.</p>
+                    <a href="https://wa.me/543624872523?text=Hola!%20Quiero%20asesoramiento%20gratuito" class="btn btn-cta" target="_blank">Quiero asesoramiento gratuito</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="testimonials-section section-padding container">
+            <h2 class="section-title">Testimonios</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card speech-bubble">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>“Próximamente”</p>
+                    <span class="client-name">¿Serás vos?</span>
+                </div>
+                <div class="testimonial-card speech-bubble">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>“Próximamente”</p>
+                    <span class="client-name">¿Serás vos?</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<div class="wave-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="wave-back" fill-opacity="1" d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,224C840,245,960,267,1080,261.3C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            <path class="wave-front" fill-opacity="1" d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,176C840,160,960,160,1080,170.7C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+    </div>
+    
+    <footer id="contacto" class="main-footer section-padding">
+        <div class="container footer-minimalist">
+        
+        <nav class="footer-nav">
+            <a href="cookies.html">Política de Cookies</a>
+            <a href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+            <a href="terminosycondiciones.html">Términos y Condiciones</a>
+            <a href="https://wa.me/543624872523?text=Hola!%20Quiero%20más%20info%20sobre%20tus%20servicios" target="_blank">Contacto</a>
+        </nav>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/holapaz.studio/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="tiltok.com" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="pinterest.com" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+        </div>
+
+        <div class="footer-credits">
+            <p>DISEÑADO POR HOLAPAZ.STUDIO</p>
+            <p>© 2025 TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+
+        <div class="footer-payments">
+            <i class="fab fa-cc-visa" title="Visa"></i>
+            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fab fa-cc-paypal" title="PayPal"></i>
+        </div>
+    </div>
+    </footer>
+
+    <audio id="audioPlayer" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" class="music-floater" title="Música On/Off">
+        <i class="fas fa-play"></i>
+    </button>
+
+       <script>
+        /* =========================================
+           LÓGICA PARA MÚLTIPLES CARRUSELES + AUTO-PLAY
+           ========================================= */
+        
+        // Función reutilizable actualizada
+        function setupCarousel(trackId, prevBtnId, nextBtnId, navId = null, autoPlayDelay = 0) {
+            const track = document.getElementById(trackId);
+            if (!track) return;
+
+            const slides = Array.from(track.children);
+            const nextButton = document.getElementById(nextBtnId);
+            const prevButton = document.getElementById(prevBtnId);
+            
+            let dotsNav = null;
+            let dots = [];
+            if (navId) {
+                dotsNav = document.getElementById(navId);
+                if (dotsNav) {
+                    dots = Array.from(dotsNav.children);
+                }
+            }
+
+            const slideWidth = slides[0].getBoundingClientRect().width;
+
+            const setSlidePosition = (slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            };
+            slides.forEach(setSlidePosition);
+
+            const moveToSlide = (currentSlide, targetSlide) => {
+                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+                currentSlide.classList.remove('current-slide');
+                targetSlide.classList.add('current-slide');
+            }
+
+            const updateDots = (currentDot, targetDot) => {
+                if (!dotsNav) return;
+                currentDot.classList.remove('current-indicator');
+                targetDot.classList.add('current-indicator');
+            }
+
+            // Función para ir al siguiente slide (la usaremos para el click y para el automático)
+            const moveToNextSlide = () => {
+                const currentSlide = track.querySelector('.current-slide');
+                let nextSlide = currentSlide.nextElementSibling;
+                
+                let currentDot = null;
+                let nextDot = null;
+                if (dotsNav) {
+                    currentDot = dotsNav.querySelector('.current-indicator');
+                    nextDot = currentDot.nextElementSibling;
+                }
+                
+                if (!nextSlide) {
+                    nextSlide = slides[0];
+                    if (dotsNav) nextDot = dots[0];
+                }
+
+                moveToSlide(currentSlide, nextSlide);
+                if (dotsNav) updateDots(currentDot, nextDot);
+            };
+
+            // --- EVENT LISTENERS ---
+
+            nextButton.addEventListener('click', moveToNextSlide);
+
+            prevButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                let prevSlide = currentSlide.previousElementSibling;
+
+                 let currentDot = null;
+                 let prevDot = null;
+                 if (dotsNav) {
+                    currentDot = dotsNav.querySelector('.current-indicator');
+                    prevDot = currentDot.previousElementSibling;
+                 }
+
+                if (!prevSlide) {
+                     prevSlide = slides[slides.length - 1];
+                     if (dotsNav) prevDot = dots[dots.length - 1];
+                }
+
+                moveToSlide(currentSlide, prevSlide);
+                if (dotsNav) updateDots(currentDot, prevDot);
+            });
+            
+            window.addEventListener('resize', () => {
+                const newSlideWidth = slides[0].getBoundingClientRect().width;
+                slides.forEach((slide, index) => {
+                    slide.style.left = newSlideWidth * index + 'px';
+                });
+                const currentSlide = track.querySelector('.current-slide');
+                track.style.transform = 'translateX(-' + currentSlide.style.left + ')';
+            });
+
+            // --- LÓGICA DE AUTO-PLAY ---
+            if (autoPlayDelay > 0) {
+                // Configura el temporizador
+                let autoPlayInterval = setInterval(moveToNextSlide, autoPlayDelay);
+
+                // Opcional: Detener el carrusel si el usuario pone el mouse encima (para leer tranquilo)
+                track.parentElement.addEventListener('mouseenter', () => {
+                    clearInterval(autoPlayInterval);
+                });
+
+                // Reanudar cuando saca el mouse
+                track.parentElement.addEventListener('mouseleave', () => {
+                    autoPlayInterval = setInterval(moveToNextSlide, autoPlayDelay);
+                });
+            }
+        }
+
+        // --- INICIALIZAR ---
+        
+        // 1. Carrusel de SERVICIOS -> Con Auto-play de 5000ms (5 segundos)
+        setupCarousel('servicesTrack', 'servPrevBtn', 'servNextBtn', null, 5000);
+        
+        // 2. Carrusel de PROYECTOS -> Sin Auto-play (0)
+        setupCarousel('projectsTrack', 'projPrevBtn', 'projNextBtn', 'projectsNav', 0);
+
+
+        /* --- MÚSICA --- */
+        const musicBtn = document.getElementById('musicBtn');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const musicIcon = musicBtn.querySelector('i');
+
+        musicBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                musicIcon.classList.remove('fa-play');
+                musicIcon.classList.add('fa-pause');
+                musicBtn.classList.add('music-playing');
+            } else {
+                audioPlayer.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-play');
+                musicBtn.classList.remove('music-playing');
+            }
+        });
+    </script>
+
+<a href="https://wa.me/543624872523?text=Hola!%20Quiero%20más%20info%20sobre%20tus%20servicios" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Buscamos los elementos en el HTML por su ID
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            // 2. Función para mostrar el menú
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active'); // Agrega la clase que lo hace visible
+                    document.body.style.overflow = 'hidden'; // Evita que se pueda scrollear el fondo
+                });
+            }
+
+            // 3. Función para cerrar el menú
+            const closeMenu = () => {
+                mobileMenu.classList.remove('active'); // Quita la clase visible
+                document.body.style.overflow = 'auto'; // Devuelve el scroll
+            };
+
+            if (closeMenuBtn) {
+                closeMenuBtn.addEventListener('click', closeMenu);
+            }
+
+            // 4. Cerrar también si tocan cualquier enlace (para ir a la sección)
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+    </script>
+
+
+</body>
+</html>
