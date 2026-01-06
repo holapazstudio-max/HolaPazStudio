@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos | HolaPaz.Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="main-header portfolio-header header-compacto">
+            <nav class="navbar container">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">HolaPaz.Studio</a></div>
+            <ul class="nav-links desktop-nav">                
+                <li><a href="portfolio.html" class="active" style="color: var(--color-primary-btn);">Trabajos</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#packs">Packs</a></li>
+                <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+                <li><a href="index.html#proceso">Proceso</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>            
+            </ul>
+            <button class="hamburger-menu" id="hamburgerBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="full-screen-menu" id="mobileMenu">
+        <button class="close-menu-btn" id="closeMenuBtn">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-link"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="portfolio.html" class="mobile-link" style="color: var(--color-rosita);"><i class="fas fa-folder-open"></i> Trabajos</a></li>
+            <li><a href="index.html#servicios" class="mobile-link"><i class="fas fa-star"></i> Servicios</a></li>
+            <li><a href="index.html#packs" class="mobile-link"><i class="fas fa-gift"></i> Packs</a></li>
+            <li><a href="index.html#contacto" class="mobile-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/543624872523" class="btn-mobile-cta mobile-link" target="_blank">Contactame</a>
+    </div>
+
+    <main>
+ <section class="legal-section container" style="padding-top: 40px; padding-bottom: 0;">
+    <h1 class="section-title">Trabajos:</h1>
+</section>
+
+<section class="container section-padding" id="portfolio-showcase-section" style="padding-top: 10px;">
+    <div class="portfolio-carousel-wrapper">
+
+        <button class="carousel-btn portfolio-btn prev-btn" id="portfolio-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="portfolio-layout-grid">
+            
+            <div class="info-card-container">
+                <div class="pretty-card fade-transition" id="project-info-card">
+                    <span class="corner-decoration top-left"></span>
+                    <span class="corner-decoration bottom-right"></span>
+
+                    <div class="card-content">
+                        <span class="project-tag">Proyecto Destacado</span>
+                        <h3 id="project-title" class="card-title">Cargando...</h3>
+                        <div class="divider-mini"></div>
+                        <p id="project-desc" class="card-desc">...</p>
+                        
+                        <div class="card-footer" id="project-tags">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="devices-display-area">
+                <div class="devices-container-compact">
+                    <div class="device-laptop">
+                        <div class="screen">
+                            <img src="" alt="Desktop View" id="desktop-image" class="fade-transition">
+                        </div>
+                        <div class="base"></div>
+                    </div>
+                    
+                    <div class="device-phone">
+                        <div class="notch"></div>
+                        <div class="screen">
+                            <img src="" alt="Mobile View" id="mobile-image" class="fade-transition">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-btn portfolio-btn next-btn" id="portfolio-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <div class="carousel-nav" id="portfolio-dots-nav"></div>
+
+</section>
+
+    </main>
+
+    <div class="wave-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="wave-back" fill-opacity="1" d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,224C840,245,960,267,1080,261.3C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            <path class="wave-front" fill-opacity="1" d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,176C840,160,960,160,1080,170.7C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+    </div>
+    
+    <footer id="contacto" class="main-footer section-padding">
+        <div class="container footer-minimalist">
+            <nav class="footer-nav">
+                <a href="index.html">Inicio</a>
+                <a href="cookies.html">Política de Cookies</a>
+                <a href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                <a href="terminosycondiciones.html">Términos y Condiciones</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/holapaz.studio/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="footer-credits">
+                <p>DISEÑADO POR HOLAPAZ.STUDIO</p>
+                <p>© 2025 TODOS LOS DERECHOS RESERVADOS</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/543624872523" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button id="musicBtn" class="music-floater" title="Música On/Off">
+        <i class="fas fa-play"></i>
+    </button>
+    <audio id="audioPlayer" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Lógica del Menú Hamburguesa
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            const closeMenu = () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            };
+
+            if (closeMenuBtn) {
+                closeMenuBtn.addEventListener('click', closeMenu);
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+
+        // Lógica de Música (Igual al Index)
+        const musicBtn = document.getElementById('musicBtn');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const musicIcon = musicBtn.querySelector('i');
+
+        musicBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                musicIcon.classList.remove('fa-play');
+                musicIcon.classList.add('fa-pause');
+                musicBtn.classList.add('music-playing');
+            } else {
+                audioPlayer.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-play');
+                musicBtn.classList.remove('music-playing');
+            }
+        });
+    </script>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        /* =========================================
+           DATOS DE TUS PROYECTOS (¡Ahora con etiquetas!)
+           ========================================= */
+        const portfolioData = [
+            {
+                title: "Diseño Web Portfolio",
+                desc: "Diseño Web Interactivo e Identidad Visual.",
+                desktopImg: "assets/images/proyectopc.png", 
+                mobileImg: "assets/images/proyectocelu.png",
+                // AQUÍ AGREGAS LAS ETIQUETAS DE ESTE PROYECTO:
+                tags: [
+                    '<i class="fas fa-palette"></i> Diseño UI/UX', 
+                    '<i class="fas fa-code"></i> Desarrollo'
+                ] 
+            },
+            {
+                title: "Proyecto Amanay",
+                desc: "Trabajo en conjunto con CE.RE.NA, animación para intro de videos.",
+                desktopImg: "assets/images/logoamanay.png",
+                mobileImg: "assets/images/amanay2.gif",
+                // ETIQUETAS DIFERENTES PARA ESTE:
+                tags: [
+                    '<i class="fas fa-pen-nib"></i> Edición', 
+                    '<i class="fas fa-video"></i> Animación'
+                ]
+            },
+        ];
+
+        /* =========================================
+           LÓGICA DEL CARRUSEL
+           ========================================= */
+        let currentProjectIndex = 0;
+        let autoPlayInterval;
+        const autoPlayDelay = 5000; 
+
+        // Referencias al DOM
+        const desktopImgEl = document.getElementById('desktop-image');
+        const mobileImgEl = document.getElementById('mobile-image');
+        const titleEl = document.getElementById('project-title');
+        const descEl = document.getElementById('project-desc');
+        const infoCardEl = document.getElementById('project-info-card');
+        const tagsContainer = document.getElementById('project-tags'); // <--- NUEVA REFERENCIA
+        
+        const prevBtn = document.getElementById('portfolio-prev');
+        const nextBtn = document.getElementById('portfolio-next');
+        const dotsContainer = document.getElementById('portfolio-dots-nav');
+
+        function loadProject(index) {
+            // 1. Fade Out
+            desktopImgEl.classList.add('fade-out');
+            mobileImgEl.classList.add('fade-out');
+            infoCardEl.classList.add('fade-out');
+
+            setTimeout(() => {
+                const project = portfolioData[index];
+                
+                // 2. Cambiar Datos Básicos
+                desktopImgEl.src = project.desktopImg;
+                mobileImgEl.src = project.mobileImg;
+                titleEl.textContent = project.title;
+                descEl.textContent = project.desc;
+
+                // 3. CAMBIAR LAS ETIQUETAS (NUEVO)
+                // Borramos lo que había antes
+                tagsContainer.innerHTML = ''; 
+                // Creamos las nuevas etiquetas una por una
+                project.tags.forEach(tagHTML => {
+                    const span = document.createElement('span');
+                    span.className = 'tech-badge';
+                    span.innerHTML = tagHTML; // Insertamos el icono y texto
+                    tagsContainer.appendChild(span);
+                });
+
+                // 4. Fade In
+                desktopImgEl.classList.remove('fade-out');
+                mobileImgEl.classList.remove('fade-out');
+                infoCardEl.classList.remove('fade-out');
+                
+                updateDots(index);
+            }, 500); 
+        }
+
+        function nextProject() {
+            currentProjectIndex = (currentProjectIndex + 1) % portfolioData.length;
+            loadProject(currentProjectIndex);
+        }
+
+        function prevProject() {
+            currentProjectIndex = (currentProjectIndex - 1 + portfolioData.length) % portfolioData.length;
+            loadProject(currentProjectIndex);
+        }
+
+        function startAutoPlay() {
+            clearInterval(autoPlayInterval); 
+            autoPlayInterval = setInterval(nextProject, autoPlayDelay);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        function createDots() {
+            portfolioData.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-indicator');
+                if (index === 0) dot.classList.add('current-indicator');
+                dot.addEventListener('click', () => {
+                    stopAutoPlay();
+                    currentProjectIndex = index;
+                    loadProject(currentProjectIndex);
+                    startAutoPlay();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots(index) {
+            const dots = dotsContainer.querySelectorAll('.carousel-indicator');
+            dots.forEach(dot => dot.classList.remove('current-indicator'));
+            dots[index].classList.add('current-indicator');
+        }
+
+        // Inicializar
+        loadProject(currentProjectIndex);
+        createDots();
+        startAutoPlay();
+
+        nextBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            nextProject();
+            startAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            prevProject();
+            startAutoPlay();
+        });
+
+        const showcaseSection = document.getElementById('portfolio-showcase-section');
+        showcaseSection.addEventListener('mouseenter', stopAutoPlay);
+        showcaseSection.addEventListener('mouseleave', startAutoPlay);
+    });
+</script>
+</body>
+</html>
