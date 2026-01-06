@@ -87,7 +87,7 @@ h2.section-title {
 
 .btn-primary {
     background-color: var(--color-primary-btn);
-    color: #FFFF; /* Texto  */
+    color: #FFFF; 
     box-shadow: 0 4px 15px rgba(241, 152, 144, 0.4);
 }
 
@@ -225,10 +225,9 @@ i.floater {
         gap: 60px;
         align-items: start;
     }
-    /* CAMBIO: Centramos los títulos para que queden sobre las tarjetas */
     .services-projects-wrapper h2.section-title {
         text-align: center; 
-        margin-bottom: 30px; /* Un poco menos de espacio para que se vea conectado */
+        margin-bottom: 30px; 
     }
 }
 /* =========================================
@@ -237,18 +236,14 @@ i.floater {
 .carousel-container {
     position: relative;
     padding: 0 40px;
-    /* Centramos el carrusel en sí mismo para asegurar alineación con el título */
     margin: 0 auto; 
-    max-width: 450px; /* Limitamos el ancho total para que las flechas no se vayan muy lejos */
+    max-width: 450px; 
 }
 
-/* --- IGUALAMOS ALTURAS PARA QUE LAS FLECHAS COINCIDAN --- */
-
-/* Altura Servicios */
+/* IGUALAMOS ALTURAS */
 .services-carousel-height .carousel-track-container {
     height: 350px; 
 }
-/* Altura Proyectos (Ahora igual que servicios) */
 .projects-carousel-height .carousel-track-container {
     height: 350px;
 }
@@ -256,7 +251,6 @@ i.floater {
 .carousel-track-container {
     overflow: hidden;
     width: 100%;
-    /* CAMBIO: Reducido a 320px para que los globos sean más pequeños y cute */
     max-width: 320px; 
     margin: 0 auto;
 }
@@ -277,12 +271,12 @@ i.floater {
     align-items: center;
 }
 
-/* Botones de navegación (Flechas) */
+/* Botones de navegación (Flechas generales) */
 .carousel-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Esto centra verticalmente basándose en la altura del contenedor */
-    background: rgba(255,255,255,0.8); /* Un poco más opaco para que se vea bien */
+    transform: translateY(-50%); 
+    background: rgba(255,255,255,0.8);
     border: none;
     width: 40px; height: 40px;
     border-radius: 50%;
@@ -290,12 +284,12 @@ i.floater {
     color: var(--color-text-dark);
     font-size: 1.2rem;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombrita suave para destacar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.2s;
 }
 
 .carousel-btn:hover {
-    transform: translateY(-50%) scale(1.1); /* Efecto pop al pasar el mouse */
+    transform: translateY(-50%) scale(1.1);
     color: var(--color-primary-btn);
 }
 
@@ -307,11 +301,11 @@ i.floater {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px; /* Reducido un poco */
+    margin-top: 50px;
 }
 .carousel-indicator {
     border: none;
-    width: 10px; height: 10px; /* Puntos un pelín más chicos */
+    width: 10px; height: 10px;
     background-color: #ddd;
     border-radius: 50%;
     cursor: pointer;
@@ -332,7 +326,7 @@ i.floater {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
-    transform: rotate(-2deg); /* Estilo "juguetón" original */
+    transform: rotate(-2deg);
     transition: transform 0.3s ease;
     border: 3px solid white;
 }
@@ -358,7 +352,7 @@ i.floater {
 }
 
 /* =========================================
-   6. ESTILOS DE GLOBOS (Proyectos)
+   6. ESTILOS DE GLOBOS (Proyectos Pequeños)
    ========================================= */
 .project-blob {
     width: 90%;
@@ -477,41 +471,39 @@ i.floater {
 }
 
 /* =========================================
-   FOOTER MINIMALISTA (Estilo Referencia)
+   FOOTER MINIMALISTA
    ========================================= */
 
-/* Ajustes generales del contenedor del footer */
 .main-footer {
-    /* Mantenemos el fondo rosita que configuramos antes */
-    background-color: var(--color-durazno); 
-    color: var(--color-marron); /* Texto marrón para contraste elegante */
-    text-align: center; /* Todo centrado */
-    padding-bottom: 60px; /* Espacio al final */
+    background-color: var(--color-amarillo); 
+    color: var(--color-marron); 
+    text-align: center; 
+    padding-top: 0px !important; /* Para fusionar con waves */
+    padding-bottom: 20px;
 }
 
 .footer-minimalist {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Espacio entre bloques (Links, Redes, Pagos) */
+    gap: 15px; 
     margin-top: -10px;
     position: relative; 
     z-index: 10;
 }
 
-/* 1. Enlaces de Navegación */
 .footer-nav {
     display: flex;
-    flex-direction: column; /* Lista vertical como en la foto */
+    flex-direction: column; 
     gap: 15px;
 }
 
 .footer-nav a {
     text-decoration: none;
     color: var(--color-marron);
-    font-size: 0.85rem; /* Letra pequeña y delicada */
-    text-transform: uppercase; /* Todo mayúsculas */
-    letter-spacing: 2px; /* Espaciado entre letras */
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
     font-weight: 600;
     transition: opacity 0.3s;
 }
@@ -520,7 +512,6 @@ i.floater {
     opacity: 0.6;
 }
 
-/* 2. Redes Sociales (Cuadrados) */
 .footer-socials {
     display: flex;
     gap: 15px;
@@ -533,7 +524,7 @@ i.floater {
     align-items: center;
     width: 40px;
     height: 40px;
-    border: 1px solid var(--color-marron); /* Borde fino */
+    border: 1px solid var(--color-marron); 
     color: var(--color-marron);
     text-decoration: none;
     font-size: 1.1rem;
@@ -542,10 +533,9 @@ i.floater {
 
 .footer-socials a:hover {
     background-color: var(--color-marron);
-    color: var(--color-rosita); /* Invertimos colores al pasar el mouse */
+    color: var(--color-rosita); 
 }
 
-/* 3. Créditos */
 .footer-credits p {
     font-size: 0.7rem;
     letter-spacing: 1px;
@@ -554,7 +544,6 @@ i.floater {
     text-transform: uppercase;
 }
 
-/* 4. Medios de Pago */
 .footer-payments {
     display: flex;
     gap: 15px;
@@ -564,18 +553,16 @@ i.floater {
     opacity: 0.9;
 }
 
-/* Estilo para los iconos de FontAwesome (Visa, Master, Paypal) */
 .footer-payments i {
-    font-size: 1.8rem; /* Un poco más grandes para que se vean bien */
+    font-size: 1.8rem; 
     color: var(--color-marron);
 }
 
-
-
 /* =========================================
-   8. BOTÓN DE MÚSICA FLOTANTE
+   8. ELEMENTOS FLOTANTES Y EXTRAS
    ========================================= */
 
+/* Música */
 .music-floater {
     position: fixed;
     bottom: 30px; left: 30px; 
@@ -612,81 +599,80 @@ i.floater {
     100% { transform: rotate(360deg); }
 }
 
-/* =========================================
-   9. GRILLA DE PORTFOLIO (Página interna)
-   ========================================= */
-
-.portfolio-header {
-    padding-bottom: 40px;
-    background: linear-gradient(135deg, var(--color-bg-gradient-start), #fff);
-}
-.portfolio-header .nav-links .active {
-    color: var(--color-primary-btn);
-    border-bottom: 2px solid var(--color-primary-btn);
-}
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 60px;
-    padding: 20px;
-}
-.project-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-.project-item:hover {
-    transform: translateY(-10px);
-}
-.blob-frame {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.05);
-    background: #fff;
-}
-.blob-frame img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-.blob-frame:hover img {
-    transform: scale(1.1);
-}
-.overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-rosita);
     color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000; 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    padding: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: pulse-pink 2s infinite;
 }
-.project-item:hover .overlay {
-    opacity: 1;
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9); 
+}
+
+@keyframes pulse-pink {
+    0% { box-shadow: 0 0 0 0 rgba(241, 152, 144, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(241, 152, 144, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(241, 152, 144, 0); }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px; height: 50px; font-size: 28px;
+        bottom: 20px; right: 20px;
+    }
+}
+
+/* Divisor de Ondas */
+.wave-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-bg-cream); 
+    margin-bottom: -2px; 
+}
+
+.wave-container svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px; 
+}
+
+.wave-back { fill: var(--color-durazno); }
+.wave-front { fill: var(--color-amarillo); }
+
+@media (max-width: 768px) {
+    .wave-container svg { height: 50px; }
 }
 
 /* =========================================
    SECCIÓN DE PACKS Y PRECIOS
    ========================================= */
-
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo automático */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 40px;
-    align-items: start; /* Para que si una es más larga, no estire a las otras */
+    align-items: start; 
 }
 
-/* Diseño base de la tarjeta */
 .pricing-card {
     background: #fff;
     border-radius: var(--border-radius-lg);
@@ -694,7 +680,7 @@ i.floater {
     text-align: center;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 3px solid transparent; /* Espacio para el borde de color */
+    border: 3px solid transparent; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
@@ -703,205 +689,65 @@ i.floater {
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* =========================================
-   SECCIÓN DE PROCESO (Estilo Tarjetas)
-   ========================================= */
-
-.process-wrapper {
-    position: relative;
-    padding: 40px 0; /* Un poco más de espacio vertical */
-}
-
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    align-items: stretch; /* Para que todas tengan la misma altura */
-    position: relative;
-    z-index: 2;
-}
-
-/* Línea conectora (ajustada para las nuevas tarjetas) */
-.dashed-line {
-    display: none;
-    position: absolute;
-    top: 50%; /* Centrada verticalmente */
-    left: 15%;
-    right: 15%;
-    height: 4px;
-    border-top: 4px dotted #E0E0E0;
-    z-index: 1;
-    transform: translateY(-50%);
-}
-
-@media (min-width: 992px) {
-    .dashed-line { display: block; }
-}
-
-/* --- DISEÑO DE LA TARJETA DEL PASO --- */
-.process-step {
-    background: #fff;
-    padding: 40px 25px;
-    border-radius: 25px; /* Bordes redondeados estilo "Packs" */
-    text-align: center;
-    position: relative;
-    border: 3px solid transparent; /* Preparamos para el color */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Efecto Hover tipo "pop" */
-.process-step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-/* El círculo interno del icono */
-.step-icon-circle {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: var(--color-marron);
-    margin-bottom: 25px;
-    border-radius: 50%; /* Círculo perfecto */
-    background-color: #f5f5f5; /* Color por defecto por si falla algo */
-}
-
-/* El número flotante (ajustado a la esquina de la tarjeta) */
-.step-number {
-    position: absolute;
-    top: -15px;
-    right: -10px;
-    background: white;
-    color: var(--color-text-dark);
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1rem;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border: 2px solid white;
-}
-
-.process-step h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--color-marron);
-}
-
-.process-step p {
-    font-size: 0.95rem;
-    color: #666;
-}
-
-/* --- VARIABLES DE COLOR POR TARJETA --- */
-
-/* Paso 1 - Lila*/
-.step-lila {
-    border-color: var(--color-lila);
-}
-.step-lila .step-icon-circle {
-    background-color: #F4EEFB;
-}
-.step-lila .step-number {
-    color: #9575CD;
-}
-
-/* Paso 2 - Durazno */
-.step-durazno {
-    border-color: var(--color-durazno);
-}
-.step-durazno .step-icon-circle {
-    background-color: #FFF5EE;
-}
-.step-durazno .step-number {
-    color: #FF8A65;
-}
-
-
-
-
-
-/* --- ESTILOS POR COLOR (Usando tus variables) --- */
-
-/* Pack Amarillo */
 .pack-yellow {
     border-color: var(--color-amarillo);
 }
-.pack-yellow .pack-price { color: #E6C200; /* Un amarillo un poco más oscuro para leerse bien */ }
+.pack-yellow .pack-price { color: #E6C200; }
 .pack-yellow .btn-pricing { background-color: var(--color-amarillo); color: var(--color-marron); }
 
-/* Pack Rosita (Destacado) */
 .pack-pink {
     border-color: var(--color-rosita);
-    background: #FFFBFB; /* Fondo muy sutilmente rosado */
-    transform: scale(1.05); /* Un poquito más grande por defecto */
+    background: #FFFBFB; 
+    transform: scale(1.05); 
     z-index: 1;
 }
 .pack-pink:hover { transform: scale(1.08) translateY(-10px); }
 .pack-pink .pack-price { color: var(--color-rosita); }
 .pack-pink .btn-pricing { background-color: var(--color-rosita); color: white; }
 
-/* Pack Lila */
 .pack-purple {
     border-color: var(--color-lila);
 }
-.pack-purple .pack-price { color: #B39DDB; /* Lila más oscuro */ }
+.pack-purple .pack-price { color: #B39DDB; }
 .pack-purple .btn-pricing { background-color: var(--color-lila); color: var(--color-marron); }
 
-
-/* --- ELEMENTOS INTERNOS --- */
 .pack-header h3 {
     font-size: 1.8rem;
     margin-bottom: 5px;
     color: var(--color-marron);
 }
-
 .pack-subtitle {
     font-size: 0.9rem;
     opacity: 0.7;
     margin-bottom: 20px;
 }
-
 .pack-price {
     font-family: var(--font-heading);
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 30px;
 }
-
 .pack-price .currency { font-size: 1.5rem; vertical-align: top; }
 .pack-price .period { font-size: 1rem; color: var(--color-text-dark); opacity: 0.5; font-weight: 400; }
 
 .pack-features {
     list-style: none;
-    text-align: left; /* Lista alineada a la izquierda */
+    text-align: left; 
     margin-bottom: 30px;
     padding: 0 10px;
 }
-
 .pack-features li {
     margin-bottom: 12px;
     font-size: 0.95rem;
     color: #555;
 }
-
 .pack-features i {
-    color: var(--color-primary-btn); /* Checkmarks en rosita */
+    color: var(--color-primary-btn); 
     margin-right: 8px;
     width: 20px;
     text-align: center;
 }
 
-/* Etiqueta "Más Pedido" */
 .tag-popular {
     position: absolute;
     top: -15px;
@@ -916,7 +762,6 @@ i.floater {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Botón específico de pricing */
 .btn-pricing {
     display: inline-block;
     padding: 10px 30px;
@@ -924,42 +769,126 @@ i.floater {
     text-decoration: none;
     font-weight: 700;
     transition: filter 0.3s;
-    width: 100%; /* Botón ancho completo */
+    width: 100%; 
 }
+.btn-pricing:hover { filter: brightness(0.95); }
 
-.btn-pricing:hover {
-    filter: brightness(0.95); /* Oscurecer un poquito al pasar el mouse */
-}
-
-/* Ajuste Responsive: En celular quitar el scale del destacado para que no se salga */
 @media (max-width: 768px) {
     .pack-pink { transform: scale(1); }
     .pack-pink:hover { transform: translateY(-10px); }
 }
 
 /* =========================================
-   SECCIÓN CTA (Llamada a la acción)
+   SECCIÓN DE PROCESO
    ========================================= */
+.process-wrapper {
+    position: relative;
+    padding: 40px 0; 
+}
 
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    align-items: stretch;
+    position: relative;
+    z-index: 2;
+}
+
+.dashed-line {
+    display: none;
+    position: absolute;
+    top: 50%; 
+    left: 15%;
+    right: 15%;
+    height: 4px;
+    border-top: 4px dotted #E0E0E0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 992px) {
+    .dashed-line { display: block; }
+}
+
+.process-step {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 25px; 
+    text-align: center;
+    position: relative;
+    border: 3px solid transparent; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.step-icon-circle {
+    width: 80px; height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-marron);
+    margin-bottom: 25px;
+    border-radius: 50%; 
+    background-color: #f5f5f5; 
+}
+
+.step-number {
+    position: absolute;
+    top: -15px; right: -10px;
+    background: white;
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    width: 40px; height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid white;
+}
+
+.process-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--color-marron);
+}
+.process-step p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.step-lila { border-color: var(--color-lila); }
+.step-lila .step-icon-circle { background-color: #F4EEFB; }
+.step-lila .step-number { color: #9575CD; }
+
+.step-durazno { border-color: var(--color-durazno); }
+.step-durazno .step-icon-circle { background-color: #FFF5EE; }
+.step-durazno .step-number { color: #FF8A65; }
+
+/* =========================================
+   SECCIÓN CTA
+   ========================================= */
 .cta-section {
-    background: transparent; /* Sin fondo de color en la sección completa */
+    background: transparent; 
     padding: 60px 0;
 }
 
 .cta-box {
-    /* El truco para que ocupe solo lo necesario: */
     display: inline-block; 
-    max-width: 800px; /* Un límite para que no sea excesivamente ancho en pantallas grandes */
-    width: 90%; /* En móviles ocupará el 90% */
-    
-    /* El Borde Color Durazno */
+    max-width: 800px; 
+    width: 90%; 
     border: 4px solid var(--color-rosita); 
-    border-radius: 40px; /* Bordes bien redondeados estilo cute */
-    
-    /* Espaciado interno para que el texto respire dentro del cuadro */
+    border-radius: 40px; 
     padding: 50px 40px;
-    
-    /* Opcional: Un fondo blanco o crema muy suave dentro del cuadro para que se lea mejor */
     background-color: var(--color-bg-cream); 
 }
 
@@ -969,19 +898,16 @@ i.floater {
     font-family: var(--font-heading);
     color: var(--color-marron);
 }
-
 .text-bold {
     font-weight: 800;
-    color: var(--color-rosita); /* Destacamos las palabras clave en rosita */
+    color: var(--color-rosita); 
 }
-
 .cta-subtitle {
     font-size: 1.1rem;
     margin-bottom: 30px;
     color: var(--color-text-dark);
 }
 
-/* Botón del CTA */
 .btn-cta {
     background-color: var(--color-amarillo);
     color: var(--color-marron);
@@ -990,140 +916,29 @@ i.floater {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
-
 .btn-cta:hover {
     transform: translateY(-3px);
-    background-color: var(--color-durazno); /* Al pasar el mouse se pone color durazno */
+    background-color: var(--color-durazno); 
     color: var(--color-marron);
 }
 
-/* =========================================
-   BOTÓN FLOTANTE DE WHATSAPP
-   ========================================= */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-rosita);
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 35px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000; /* Para que esté siempre encima de todo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    /* Animación de pulso para llamar la atención */
-    animation: pulse-pink 2s infinite;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    filter: brightness(0.9); 
-}
-
-/* Definición de la animación de pulso */
-@keyframes pulse-pink {
-	0% {
-		box-shadow: 0 0 0 0 rgba(241, 152, 144, 0.7);
-	}
-	70% {
-		box-shadow: 0 0 0 15px rgba(241, 152, 144, 0);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgba(241, 152, 144, 0);
-	}
-}
-
-/* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
-    .cta-title {
-        font-size: 2rem;
-    }
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 28px;
-        bottom: 20px;
-        right: 20px;
-    }
+    .cta-title { font-size: 2rem; }
 }
 
 /* =========================================
-   DIVISOR DE ONDAS (Nuevo Estilo Rosita)
-   ========================================= */
-
-.wave-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    background-color: var(--color-bg-cream); /* Coincide con el fondo de la web */
-    margin-bottom: -2px; /* Un pequeño ajuste para evitar líneas blancas */
-}
-
-.wave-container svg {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 250px; /* Ondas más altas para que se luzcan las capas */
-}
-
-/* Color de la capa trasera (Durazno) */
-.wave-back {
-    fill: var(--color-durazno); 
-}
-
-/* Color de la capa delantera (Rosita) */
-.wave-front {
-    fill: var(--color-amarillo);
-}
-
-/* --- AJUSTE DEL FOOTER PARA QUE COMBINE --- */
-/* Cambiamos el fondo del footer para que se fusione con la onda delantera */
-.main-footer {
-    background-color: var(--color-amarillo); /* Antes era var(--color-bg-footer) */
-    color: var(--color-marron); /* Texto claro para que se lea bien sobre el rosita */
-    text-align: center;
-    padding-top: 0px !important;
-    padding-bottom: 20px;
-
-}
-
-/* Aseguramos que los enlaces del footer también sean claros */
-.footer-links a {
-    color: var(--color-bg-cream);
-    opacity: 0.9;
-}
-.footer-links a:hover {
-    opacity: 1;
-}
-
-/* Ajuste para celulares */
-@media (max-width: 768px) {
-    .wave-container svg {
-        height: 50px; /* Altura ajustada para móvil */
-    }
-}
-
-/* =========================================
-   PÁGINAS LEGALES (Cookies, Términos, etc.)
+   PÁGINAS LEGALES
    ========================================= */
 .legal-section .section-title {
     text-align: center;
-    margin-bottom: 40px; /* Un poco de aire debajo del título */
+    margin-bottom: 40px; 
     text-decoration: underline;
 }
 
-   .legal-content {
-    max-width: 800px; /* Ancho máximo de lectura cómodo */
-    margin: 0 auto;   /* Centrado */
-    text-align: left; /* Texto alineado a la izquierda */
+.legal-content {
+    max-width: 800px; 
+    margin: 0 auto;  
+    text-align: left; 
     padding: 0 20px;
     line-height: 1.8;
     color: var(--color-text-dark);
@@ -1136,54 +951,41 @@ i.floater {
     font-family: var(--font-heading);
 }
 
-/* Ajuste del Header en páginas internas */
-/* Quitamos el degradado o lo hacemos más sutil si prefieres */
-body {
-    /* Asegura que el fondo siga siendo crema */
-    background-color: var(--color-bg-cream);
-}
-
 /* =========================================
-   10. ESTILOS PREGUNTAS FRECUENTES (Acordeón)
+   9. ESTILOS PREGUNTAS FRECUENTES (Acordeón)
    ========================================= */
-
-/* Títulos de las secciones dentro de las FAQs */
 .faq-category-title {
     font-family: var(--font-heading);
-    color: var(--color-rosita); /* Rosita para destacar */
+    color: var(--color-rosita); 
     font-size: 1.5rem;
     margin-top: 50px;
     margin-bottom: 20px;
-    text-align: left; /* Alineado a la izquierda para seguir la lectura */
+    text-align: left; 
     display: inline-block;
     border-bottom: 2px dashed var(--color-lila);
 }
 
-/* La tarjeta contenedora de cada pregunta */
 details.faq-card {
-    background-color: #ffffff; /* Blanco para resaltar sobre el fondo crema */
+    background-color: #ffffff; 
     margin-bottom: 15px;
-    border-radius: 20px; /* Redondito estilo cute */
+    border-radius: 20px; 
     border: 2px solid transparent;
-    box-shadow: 0 4px 10px rgba(109, 76, 65, 0.05); /* Sombra suave color marrón */
+    box-shadow: 0 4px 10px rgba(109, 76, 65, 0.05); 
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por encima */
 details.faq-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(241, 152, 144, 0.15); /* Sombrita rosada */
+    box-shadow: 0 8px 15px rgba(241, 152, 144, 0.15); 
     border-color: var(--color-lila);
 }
 
-/* Estilo cuando la pregunta está ABIERTA */
 details.faq-card[open] {
-    border-color: var(--color-rosita); /* Borde rosita al abrir */
-    background-color: #FFFBFB; /* Fondo muy sutil rosado */
+    border-color: var(--color-rosita); 
+    background-color: #FFFBFB; 
 }
 
-/* El texto de la pregunta (El botón clickeable) */
 summary {
     padding: 20px 25px;
     cursor: pointer;
@@ -1191,17 +993,13 @@ summary {
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--color-marron);
-    list-style: none; /* Oculta el triángulo feo por defecto */
+    list-style: none; 
     position: relative;
-    padding-right: 50px; /* Espacio para el icono */
+    padding-right: 50px; 
 }
 
-/* Ocultar triángulo en Safari/Chrome */
-summary::-webkit-details-marker {
-    display: none;
-}
+summary::-webkit-details-marker { display: none; }
 
-/* El Icono (+) hecho con CSS */
 summary::after {
     content: '+'; 
     position: absolute;
@@ -1214,130 +1012,100 @@ summary::after {
     transition: transform 0.3s ease;
 }
 
-/* Animación del Icono cuando se abre (-) */
 details[open] summary::after {
-    transform: translateY(-50%) rotate(45deg); /* Gira para formar una X */
+    transform: translateY(-50%) rotate(45deg); 
     color: var(--color-marron);
 }
 
-/* Contenedor de la respuesta */
 .faq-answer {
     padding: 0 25px 25px 25px;
-    color: #666; /* Un gris suave para leer mejor */
+    color: #666; 
     font-family: var(--font-body);
     font-size: 0.95rem;
     line-height: 1.6;
     animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Pequeña animación para que el texto aparezca suave */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================================
-   MENÚ RESPONSIVE (Estilo Full Screen Blur)
+   10. MENÚ RESPONSIVE (Blur & Full Screen)
    ========================================= */
 
-/* Ocultar elementos móviles en escritorio */
 .hamburger-menu, .full-screen-menu {
     display: none;
 }
 
-/* --- ESTILOS PARA MÓVIL (Menores a 768px) --- */
 @media (max-width: 768px) {
-    
-    /* 1. Ocultar menú de escritorio y mostrar hamburguesa */
     .desktop-nav { display: none; }
     
     .hamburger-menu {
         display: block;
         background: none;
         border: none;
-        color: var(--color-marron); /* O blanco si el fondo es oscuro */
-        font-size: 1.8rem;
-        cursor: pointer;
         position: fixed;
         top: 20px; 
         right: 20px; 
         z-index: 1000;
-
-        /* ESTÉTICA DE BOTÓN FLOTANTE */
-        /* Le damos fondo y forma para que se vea bien sobre cualquier color */
-        background-color: rgba(255, 255, 255, 0.9); /* Blanco casi opaco */
-        backdrop-filter: blur(5px); /* Efecto vidrio sutil */
+        background-color: rgba(255, 255, 255, 0.9); 
+        backdrop-filter: blur(5px); 
         width: 50px; 
         height: 50px;
-        border-radius: 50%; /* Lo hacemos redondo */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombrita para que se destaque */
-        border: 2px solid var(--color-rosita); /* Borde rosita para combinar */
-        
-        /* Centrar el icono dentro del círculo */
+        border-radius: 50%; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        border: 2px solid var(--color-rosita); 
         display: flex;
         justify-content: center;
         align-items: center;
-        
         color: var(--color-marron); 
         font-size: 1.5rem;
         cursor: pointer;
         transition: all 0.3s ease;
     }
 
-    /* Efecto al tocarlo */
-    .hamburger-menu:active {
-        transform: scale(0.9);
-    }
+    .hamburger-menu:active { transform: scale(0.9); }
 
-    }
-
-    /* 2. El Contenedor Pantalla Completa */
     .full-screen-menu {
-        display: flex; /* Usamos flex para centrar todo */
+        display: flex; 
         flex-direction: column;
-        justify-content: center; /* Centrado vertical */
-        align-items: center;     /* Centrado horizontal */
-        
+        justify-content: center; 
+        align-items: center;    
         position: fixed;
         top: 0; left: 0;
         width: 100%; height: 100%;
-        z-index: 9999; /* Por encima de todo */
-        
-        /* Fondo oscuro con transparencia + Blur (Efecto de la foto) */
-        background-color: rgba(50, 40, 40, 0.85); /* Un marrón muy oscuro transparente */
-        backdrop-filter: blur(10px); /* El efecto borroso */
-        -webkit-backdrop-filter: blur(10px); /* Para Safari */
-        
-        /* Animación de entrada */
+        z-index: 9999; 
+        background-color: rgba(50, 40, 40, 0.85); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px); 
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s ease;
     }
 
-    /* Clase para mostrar el menú (se activa con JS) */
     .full-screen-menu.active {
         opacity: 1;
         visibility: visible;
     }
 
-    /* 3. Botón de Cerrar (X) */
     .close-menu-btn {
         position: absolute;
         top: 30px;
         background: none;
         border: none;
-        color: white; /* La X en blanco */
+        color: white; 
         font-size: 2rem;
         cursor: pointer;
         padding-bottom: 10px;
-        border-bottom: 1px solid var(--color-rosita); /* La línea debajo de la X */
+        border-bottom: 1px solid var(--color-rosita); 
         width: 50px;
         transition: transform 0.3s;
     }
     
     .close-menu-btn:hover { transform: rotate(90deg); }
 
-    /* 4. Lista de Enlaces */
     .mobile-nav-list {
         list-style: none;
         text-align: center;
@@ -1345,13 +1113,11 @@ details[open] summary::after {
         margin-bottom: 40px;
     }
 
-    .mobile-nav-list li {
-        margin: 25px 0;
-    }
+    .mobile-nav-list li { margin: 25px 0; }
 
     .mobile-link {
         text-decoration: none;
-        color: #ddd; /* Blanco suave */
+        color: #ddd; 
         font-family: var(--font-body);
         font-size: 1.2rem;
         font-weight: 600;
@@ -1360,24 +1126,22 @@ details[open] summary::after {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 15px; /* Espacio entre icono y texto */
+        gap: 15px; 
     }
 
     .mobile-link i {
         font-size: 1rem;
-        color: var(--color-rosita); /* Iconos en rosita */
+        color: var(--color-rosita); 
     }
 
-    /* Efecto Hover/Active: Se pone todo rosita */
     .mobile-link:hover, .mobile-link:active {
         color: var(--color-rosita);
     }
 
-    /* 5. Botón CTA 'Contactame' (Estilo Outline) */
     .btn-mobile-cta {
         margin-top: 20px;
         padding: 12px 60px;
-        border: 1px solid white; /* Borde blanco fino */
+        border: 1px solid white; 
         border-radius: 50px;
         color: white;
         text-transform: uppercase;
@@ -1391,3 +1155,295 @@ details[open] summary::after {
         border-color: var(--color-rosita);
         color: white;
     }
+}
+
+/* =========================================
+   11. PORTFOLIO: DISEÑO DEFINITIVO
+   ========================================= */
+
+.portfolio-carousel-wrapper {
+    position: relative;
+    padding: 0 50px; /* Espacio para flechas en PC */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- GRID PRINCIPAL (PC) --- */
+.portfolio-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Texto izq, Dispositivos der */
+    gap: 40px;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* --- ZONA DE DISPOSITIVOS --- */
+.devices-display-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; /* Altura fija para centrar bien en PC */
+}
+
+/* Contenedor relativo para posicionar flechas respecto a esto */
+.devices-container-compact {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+
+/* Laptop */
+.device-laptop {
+    position: relative;
+    width: 80%;
+    max-width: 450px;
+    background: var(--color-marron);
+    padding: 10px 10px 0 10px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.device-laptop .screen {
+    background: white;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    position: relative;
+}
+
+.device-laptop .base {
+    height: 10px;
+    background: #8D6E63;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Celular */
+.device-phone {
+    position: absolute;
+    right: 5%; 
+    bottom: -15px; 
+    width: 90px;
+    height: 180px;
+    background: var(--color-text-dark);
+    border-radius: 15px;
+    border: 4px solid var(--color-marron);
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.15);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.device-phone .screen {
+    background: white;
+    width: 100%; height: 100%;
+}
+
+/* Imágenes */
+.device-laptop .screen img,
+.device-phone .screen img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* --- TARJETA DE TEXTO (VERSIÓN COMPACTA) --- */
+.info-card-container {
+    display: flex;
+    justify-content: center; /* O flex-end para pegarla más a la laptop */
+    perspective: 1000px;
+}
+
+.pretty-card {
+    background-color: #FFFBFB;
+    border: 3px solid var(--color-marron);
+    border-radius: 20px;
+    
+    /* CAMBIO 1: Mucho menos relleno (antes era 40px) */
+    padding: 25px 25px; 
+    
+    position: relative;
+    width: 100%;
+    
+    /* CAMBIO 2: Limitamos el ancho para que no se vea "gorda" */
+    max-width: 320px; 
+    
+    box-shadow: 8px 8px 0px rgba(241, 152, 144, 0.3); /* Sombra un pelín más chica */
+    transition: transform 0.3s ease;
+}
+
+.pretty-card:hover { transform: translateY(-3px); }
+
+.project-tag {
+    font-size: 0.7rem; /* Letra más chica */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-rosita);
+    font-weight: 700;
+    margin-bottom: 5px; /* Menos espacio */
+    display: block;
+}
+
+.card-title {
+    /* CAMBIO 3: Título más pequeño para que no grite */
+    font-size: 1.6rem; 
+    color: var(--color-marron);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.card-desc {
+    font-size: 0.9rem; /* Texto de descripción más delicado */
+    color: #666;
+    margin-bottom: 20px; /* Menos espacio antes de los botones */
+    line-height: 1.5;
+}
+
+/* Ajuste de los botones (badges) para que acompañen el tamaño */
+.tech-badge {
+    background: var(--color-bg-cream);
+    border: 1px solid var(--color-marron);
+    padding: 4px 12px; /* Más finitos */
+    border-radius: 20px;
+    font-size: 0.75rem; /* Letra más chica */
+    font-weight: 600;
+    color: var(--color-marron);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Transiciones */
+.fade-transition {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-out {
+    opacity: 0 !important;
+    transform: translateY(10px);
+}
+
+/* --- FLECHAS DE NAVEGACIÓN (Portfolio) --- */
+.portfolio-btn {
+    position: absolute;
+    /* En PC, centrado verticalmente respecto a la zona de dispositivos */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: 2px solid var(--color-bg-cream);
+    color: var(--color-marron);
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.portfolio-btn:hover {
+    background: var(--color-rosita);
+    color: white;
+    border-color: var(--color-rosita);
+}
+
+/* Posición en PC (dentro del wrapper grande) */
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+
+/* =========================================
+   RESPONSIVE (CELULAR Y TABLET)
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .tech-badge {
+        font-size: 0.7rem !important; /* Letra más chiquita */
+        padding: 4px 10px !important; /* Relleno más ajustado */
+    }
+    
+    .portfolio-layout-grid {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 20px;
+    }
+
+    /* 1. Área de dispositivos primero */
+    .devices-display-area {
+        order: 1; 
+        width: 100%;
+        height: auto; 
+        padding: 40px 0; /* Espacio para que las flechas respiren */
+        position: relative; /* Clave para posicionar las flechas */
+    }
+
+    .devices-container-compact {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    /* Laptop en móvil */
+    .device-laptop {
+        width: 85% !important; 
+        max-width: 400px;
+    }
+
+    /* Celular en móvil: Superpuesto y un poco inclinado */
+    .device-phone {
+        position: relative !important; 
+        right: auto !important; 
+        bottom: auto !important;
+        margin-top: -60px; /* Superposición */
+        margin-left: 30%;  /* Derecha */
+        transform: rotate(5deg);
+    }
+
+    /* --- CORRECCIÓN DE FLECHAS EN CELULAR --- */
+    .portfolio-btn {
+        /* Centrado verticalmente */
+        top: 50% !important; 
+        bottom: auto !important;
+        transform: translateY(-50%);
+        
+        /* Tamaño ajustado */
+        width: 40px; 
+        height: 40px;
+        background: rgba(255, 255, 255, 0.95); 
+        border: 1px solid var(--color-marron);
+    }
+
+    /* Pegadas a los bordes de la pantalla/contenedor */
+    .prev-btn { left: 0px !important; }
+    .next-btn { right: 0px !important; }
+
+    /* 2. Tarjeta de info abajo */
+    .info-card-container {
+        order: 2;
+        padding: 0 10px;
+    }
+    
+    .pretty-card {
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .card-footer { 
+        justify-content: center; flex-wrap: wrap; }
+}
+
+/* =========================================
+   VARIANTE: HEADER COMPACTO (Para Portfolio y Cookies)
+   ========================================= */
+.header-compacto {
+    padding-bottom: 15px !important; /* Le quita el relleno de abajo */
+    padding-top: 0px !important;     /* Ajuste fino si es necesario */
+}
+
+/* Si en el futuro agregas elementos extra, esto asegura que no molesten */
+.header-compacto .hero {
+    display: none; 
+}
